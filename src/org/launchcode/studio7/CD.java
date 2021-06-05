@@ -1,10 +1,16 @@
 package org.launchcode.studio7;
 
-public class CD {
+public class CD extends BaseDisc implements OpticalDisc{
 
-    // TODO: Implement your custom interface.
+    public String bandName;
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
+    public CD(String aTitle, String aBandName) {
+        super(aTitle);
+        bandName = aBandName;
+    }
 
+    @Override
+    public void spinDisc() {
+        System.out.println("CD music is playing");
+    }
 }
